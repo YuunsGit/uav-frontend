@@ -15,6 +15,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@tanstack/vue-table": "^8.17.3",
     "@vueuse/core": "^10.11.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -22,7 +23,8 @@
     "radix-vue": "^1.8.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@nightwatch/vue": "^3.1.0",

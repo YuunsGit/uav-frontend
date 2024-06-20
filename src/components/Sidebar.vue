@@ -6,36 +6,36 @@ import { Badge } from '@/components/ui/badge'
 </script>
 
 <template>
-  <div class="bg-muted/40 hidden border-r md:block">
+  <div class="hidden border-r bg-muted/40 md:block">
     <div class="flex h-full max-h-screen flex-col gap-2">
       <div class="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
-        <a href="/" class="flex items-center gap-2 font-semibold">
-          <PlaneTakeoff class="h-6 w-6" />
-          <span class="">UAV Monitoring</span>
-        </a>
+        <RouterLink to="/" class="flex items-center gap-2 font-semibold">
+          <PlaneTakeoff class="size-6" />
+          <span class="pl-1">UAV Monitoring</span>
+        </RouterLink>
       </div>
       <div class="flex-1">
         <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
-          <a
-            href="/drones"
-            class="text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+          <RouterLink
+            to="/drones"
+            class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:bg-muted hover:text-primary"
           >
-            <Plane class="h-4 w-4" />
+            <Plane class="size-4" />
             Drones
-          </a>
-          <a
-            href="/tasks"
-            class="text-muted-foreground hover:text-primary flex items-center gap-3 rounded-lg px-3 py-2 transition-all"
+          </RouterLink>
+          <RouterLink
+            to="/tasks"
+            class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:bg-muted hover:text-primary"
           >
-            <ListTodo class="h-4 w-4" />
+            <ListTodo class="size-4" />
             Tasks
             <Badge
               aria-label="Task count"
-              class="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full"
+              class="ml-auto flex size-6 shrink-0 items-center justify-center rounded-full"
             >
               32
             </Badge>
-          </a>
+          </RouterLink>
         </nav>
       </div>
       <div class="mt-auto p-4">

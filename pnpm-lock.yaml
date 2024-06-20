@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@tanstack/vue-table':
+    specifier: ^8.17.3
+    version: 8.17.3(vue@3.4.29)
   '@vueuse/core':
     specifier: ^10.11.0
     version: 10.11.0(vue@3.4.29)
@@ -29,6 +32,9 @@ dependencies:
   vue:
     specifier: ^3.4.21
     version: 3.4.29(typescript@5.4.5)
+  vue-router:
+    specifier: '4'
+    version: 4.3.3(vue@3.4.29)
 
 devDependencies:
   '@nightwatch/vue':
@@ -1196,8 +1202,23 @@ packages:
       tslib: 2.6.3
     dev: false
 
+  /@tanstack/table-core@8.17.3:
+    resolution: {integrity: sha512-mPBodDGVL+fl6d90wUREepHa/7lhsghg2A3vFpakEhrhtbIlgNAZiMr7ccTgak5qbHqF14Fwy+W1yFWQt+WmYQ==}
+    engines: {node: '>=12'}
+    dev: false
+
   /@tanstack/virtual-core@3.5.1:
     resolution: {integrity: sha512-046+AUSiDru/V9pajE1du8WayvBKeCvJ2NmKPy/mR8/SbKKrqmSbj7LJBfXE+nSq4f5TBXvnCzu0kcYebI9WdQ==}
+    dev: false
+
+  /@tanstack/vue-table@8.17.3(vue@3.4.29):
+    resolution: {integrity: sha512-19amh2JJR4cFKmi3ZQERwwJg1ucoLm955Xg+RzypCMn6/dmHEzDu2TkVH/riaZFw5JbVfl17MoobMjWNE/fAEg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: '>=3.2'
+    dependencies:
+      '@tanstack/table-core': 8.17.3
+      vue: 3.4.29(typescript@5.4.5)
     dev: false
 
   /@tanstack/vue-virtual@3.5.1(vue@3.4.29):
@@ -1537,6 +1558,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.4.29
       '@vue/shared': 3.4.29
+
+  /@vue/devtools-api@6.6.3:
+    resolution: {integrity: sha512-0MiMsFma/HqA6g3KLKn+AGpL1kgKhFWszC9U29NfpWK5LE7bjeXxySWJrOJ77hBz+TBrBQ7o4QJqbPbqbs8rJw==}
+    dev: false
 
   /@vue/eslint-config-prettier@9.0.0(eslint@8.57.0)(prettier@3.3.2):
     resolution: {integrity: sha512-z1ZIAAUS9pKzo/ANEfd2sO+v2IUalz7cM/cTLOZ7vRFOPk5/xuRKQteOu1DErFLAh/lYGXMVZ0IfYKlyInuDVg==}
@@ -5895,6 +5920,15 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /vue-router@4.3.3(vue@3.4.29):
+    resolution: {integrity: sha512-8Q+u+WP4N2SXY38FDcF2H1dUEbYVHVPtPCPZj/GTZx8RCbiB8AtJP9+YIxn4Vs0svMTNQcLIzka4GH7Utkx9xQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.6.3
+      vue: 3.4.29(typescript@5.4.5)
+    dev: false
 
   /vue-template-compiler@2.7.16:
     resolution: {integrity: sha512-AYbUWAJHLGGQM7+cNTELw+KsOG9nl2CnSv467WobS5Cv9uk3wFcnr1Etsz2sEIHEZvw1U+o9mRlEO6QbZvUPGQ==}
