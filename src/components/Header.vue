@@ -10,13 +10,15 @@ import {
 import { CircleUser } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import MobileSidebar from '@/components/MobileSidebar.vue'
+import Breadcrumb from '@/components/Breadcrumb.vue'
 </script>
 
 <template>
   <header
-    class="flex h-14 items-center justify-end gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6"
+    class="flex h-14 items-center justify-between gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6"
   >
     <MobileSidebar />
+    <Breadcrumb />
     <DropdownMenu class="ml-auto">
       <DropdownMenuTrigger as-child>
         <Button variant="secondary" size="icon" class="rounded-full">

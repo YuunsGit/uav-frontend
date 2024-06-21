@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import SideBar from '@/components/Sidebar.vue'
 import Header from '@/components/Header.vue'
+import { provide, ref } from 'vue'
+
+const breadcrumbThumb = ref('')
+provide('breadcrumbThumb', breadcrumbThumb)
 </script>
 
 <template>

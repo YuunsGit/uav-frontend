@@ -5,30 +5,26 @@ export interface Drone {
   id: string
   name: string
   taskCount: number
-  imagesTaken: number
+  imagesCaptured: number
 }
 
 export const columns: ColumnDef<Drone>[] = [
   {
     accessorKey: 'id',
     header: () => h('div', 'ID'),
-    enableSorting: false,
-    cell: ({ row }) => h('div', { class: 'w-fit' }, row.getValue('id'))
+    enableSorting: false
   },
   {
     accessorKey: 'name',
-    header: (header) => h('button', { onClick: () => header.column.toggleSorting() }, 'Name'),
-    cell: ({ row }) => h('div', row.getValue('name'))
+    header: (header) => h('button', { onClick: () => header.column.toggleSorting() }, 'Name')
   },
   {
     accessorKey: 'taskCount',
-    header: (header) => h('button', { onClick: () => header.column.toggleSorting() }, 'Task Count'),
-    cell: ({ row }) => h('div', { class: 'max-w-20' }, row.getValue('taskCount'))
+    header: (header) => h('button', { onClick: () => header.column.toggleSorting() }, 'Task Count')
   },
   {
-    accessorKey: 'imagesTaken',
+    accessorKey: 'imagesCaptured',
     header: (header) =>
-      h('button', { onClick: () => header.column.toggleSorting() }, 'Images Taken'),
-    cell: ({ row }) => h('div', row.getValue('imagesTaken'))
+      h('button', { onClick: () => header.column.toggleSorting() }, 'Images Captured')
   }
 ]

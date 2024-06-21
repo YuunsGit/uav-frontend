@@ -2,7 +2,6 @@
 import { ListTodo, Plane, PlaneTakeoff } from 'lucide-vue-next'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
 </script>
 
 <template>
@@ -18,23 +17,19 @@ import { Badge } from '@/components/ui/badge'
         <nav class="grid items-start px-2 text-sm font-medium lg:px-4">
           <RouterLink
             to="/drones"
-            class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:bg-muted hover:text-primary"
+            active-class="bg-muted text-primary"
+            class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
           >
             <Plane class="size-4" />
             Drones
           </RouterLink>
           <RouterLink
             to="/tasks"
-            class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:bg-muted hover:text-primary"
+            active-class="bg-muted text-primary"
+            class="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
           >
             <ListTodo class="size-4" />
             Tasks
-            <Badge
-              aria-label="Task count"
-              class="ml-auto flex size-6 shrink-0 items-center justify-center rounded-full"
-            >
-              32
-            </Badge>
           </RouterLink>
         </nav>
       </div>
