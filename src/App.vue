@@ -2,6 +2,7 @@
 import SideBar from '@/components/Sidebar.vue'
 import Header from '@/components/Header.vue'
 import { provide, ref } from 'vue'
+import { Toaster } from '@/components/ui/toast'
 
 const breadcrumbThumb = ref('')
 provide('breadcrumbThumb', breadcrumbThumb)
@@ -15,4 +16,5 @@ provide('breadcrumbThumb', breadcrumbThumb)
       <RouterView />
     </div>
   </div>
+  <Toaster />
 </template>

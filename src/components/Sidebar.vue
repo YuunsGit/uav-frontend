@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ListTodo, Plane, PlaneTakeoff } from 'lucide-vue-next'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 </script>
 
 <template>
@@ -33,18 +31,19 @@ import { Button } from '@/components/ui/button'
           </RouterLink>
         </nav>
       </div>
-      <div class="mt-auto p-4">
-        <Card>
-          <CardHeader class="p-2 pt-0 md:p-4">
-            <CardTitle>Switch theme</CardTitle>
-            <CardDescription>
-              Unlock all features and get unlimited access to our support team.
-            </CardDescription>
-          </CardHeader>
-          <CardContent class="p-2 pt-0 md:p-4 md:pt-0">
-            <Button size="sm" class="w-full"> Upgrade </Button>
-          </CardContent>
-        </Card>
+      <div class="mt-auto p-4 text-sm text-muted-foreground">
+        <p>UAV Monitoring App</p>
+        <p>
+          by
+          <a
+            class="font-semibold"
+            href="https://yunusemre.dev/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Yunus Emre Kepenek
+          </a>
+        </p>
       </div>
     </div>
   </div>
