@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ListTodo, Menu, Plane, PlaneTakeoff } from 'lucide-vue-next'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 </script>
 
@@ -34,18 +33,19 @@ import { Button } from '@/components/ui/button'
           Tasks
         </RouterLink>
       </nav>
-      <div class="mt-auto">
-        <Card>
-          <CardHeader>
-            <CardTitle>Upgrade to Pro</CardTitle>
-            <CardDescription>
-              Unlock all features and get unlimited access to our support team.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <Button size="sm" class="w-full"> Upgrade </Button>
-          </CardContent>
-        </Card>
+      <div class="mt-auto p-4 text-sm text-muted-foreground">
+        <p>UAV Monitoring App</p>
+        <p>
+          by
+          <a
+            class="font-semibold"
+            href="https://yunusemre.dev/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Yunus Emre Kepenek
+          </a>
+        </p>
       </div>
     </SheetContent>
   </Sheet>

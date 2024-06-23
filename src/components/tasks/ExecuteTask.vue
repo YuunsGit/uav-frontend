@@ -13,14 +13,13 @@ import { Button } from '@/components/ui/button'
 import { toast } from '@/components/ui/toast'
 import { ref } from 'vue'
 import { makeFetch } from '@/lib/utils'
-import { useRouter } from 'vue-router'
 
 const props = defineProps<{
   taskId: string
+  fetchTaskDetails: () => Promise<void>
 }>()
 
 const isOpen = ref(false)
-const router = useRouter()
 
 function onSubmit() {
   makeFetch(`/tasks/${props.taskId}/execute`, {
@@ -29,7 +28,7 @@ function onSubmit() {
     }
   })
     .then(() => {
-      router.go(0)
+      props.fetchTaskDetails()
       toast({
         title: 'Success!',
         description: 'Task executed successfully.'

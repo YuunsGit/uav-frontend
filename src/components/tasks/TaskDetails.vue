@@ -39,9 +39,13 @@ const API_URL = import.meta.env['VITE_API_URL']
 const breadcrumbThumb = inject<{ value: string }>('breadcrumbThumb')
 const route = useRoute()
 
-onMounted(async () => {
+async function fetchTaskDetails() {
   taskDetails.value = await makeFetch(`/tasks/${route.params.id}`, { loadingState: isLoading })
   if (taskDetails.value?.name) breadcrumbThumb!.value = taskDetails.value.name
+}
+
+onMounted(() => {
+  fetchTaskDetails()
 })
 
 onUnmounted(() => {
@@ -65,7 +69,7 @@ onUnmounted(() => {
             Task ID: <span>{{ taskDetails && taskDetails.id }}</span>
           </p>
         </div>
-        <ExecuteTask :task-id="taskDetails.id" />
+        <ExecuteTask :task-id="taskDetails.id" :fetch-task-details="fetchTaskDetails" />
       </div>
       <div class="ml-0 min-w-96 space-y-4 px-0">
         <div class="grid grid-cols-4 items-start gap-4">
