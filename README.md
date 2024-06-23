@@ -1,7 +1,9 @@
 ![uav](https://github.com/YuunsGit/uav-frontend/assets/42357900/57d23715-600d-4b03-9b68-c9499a5ae998)
 
-# UAV Monitoring App
+# UAV Monitoring App - [uav.yunusemre.dev](https://uav.yunusemre.dev/)
 The UAV Monitoring App is a user-friendly web application designed for managing drones, their assigned tasks, and the images they capture. It interfaces with the [UAV API](https://github.com/YuunsGit/uav-backend/), ensuring a streamlined and maintainable workflow. This document provides detailed instructions on installation, configuration, and usage of the UAV Monitoring App.
+
+Live preview of the application: [uav.yunusemre.dev](https://uav.yunusemre.dev/)
 
 ## Prerequisites
 Before installing the UAV Monitoring App, ensure that you have the following prerequisites installed on your system:
